@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Başkent Lazer Merkezi — Web Sitesi Teklifi</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{--cyan:#1c9aab;--cyan-lt:#2fb8cb;--violet:#6a5acd;--ink:#0b1218;--muted:#5c7280;--line:#dde7ea;--paper:#f4f9fa;--good:#3f7a5a;--good-pale:#eaf3ed;--ease:cubic-bezier(.32,.72,0,1)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#dbe6e9;color:var(--ink);font-family:'Sora',sans-serif;font-weight:400;line-height:1.65;padding:30px 16px}
+  .page{max-width:820px;margin:0 auto 26px;background:#fff;box-shadow:0 20px 60px -24px rgba(0,0,0,.34);border-top:5px solid var(--cyan)}
+  .inner{padding:52px 58px}
+  h2,h3,h4{font-weight:700;line-height:1.16;letter-spacing:-.01em}
+  .pf{font-family:'Syne',sans-serif;font-weight:800;color:var(--cyan)}
+  h2,h3,h4,.logo b{font-family:'Syne',sans-serif}
+  .grad{background:linear-gradient(100deg,var(--cyan),#4fb8c7 45%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding-bottom:26px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .mk{width:48px;height:48px;border-radius:50%;background:linear-gradient(150deg,var(--cyan-lt),var(--violet));display:grid;place-items:center;flex:none}
+  .logo .mk i{font-style:normal;font-weight:800;font-size:1.05rem;color:#fff}
+  .logo b{font-weight:800;font-size:1.35rem;display:block}
+  .logo i.s{font-style:normal;font-size:.52rem;letter-spacing:.26em;color:var(--muted);text-transform:uppercase;display:block;font-weight:600}
+  .doclabel{text-align:right;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .doclabel b{display:block;font-weight:800;font-size:1.5rem;color:var(--cyan);margin-top:5px;text-transform:none;letter-spacing:-.02em}
+  .meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.8rem;color:var(--muted);margin:22px 0 30px}
+  .meta b{color:var(--ink);font-weight:600}
+  .eyebrow{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--cyan);font-weight:700}
+  h2{font-size:1.95rem;margin:6px 0 14px}
+  h3{font-size:1.26rem;margin:0 0 6px}
+  p{margin-bottom:12px}
+  .lead{background:#eaf5f7;border-left:3px solid var(--cyan);padding:20px 24px;margin:8px 0 26px;font-size:1rem}
+  .lead strong{font-weight:700}
+  .hi{background:var(--ink);color:#fff;border-radius:14px;padding:24px 28px;margin:18px 0}
+  .hi .hd{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan-lt);font-weight:700;margin-bottom:9px}
+  .hi b{color:#fff;font-weight:700}
+  .hi p{color:rgba(255,255,255,.78);margin-bottom:9px}
+  .hi p:last-child{margin-bottom:0}
+  .good{background:var(--good-pale);border:1px solid #d7e8dd;border-radius:14px;padding:22px 26px;margin:18px 0}
+  .good .hd{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--good);font-weight:700;margin-bottom:9px}
+  .good b{color:var(--cyan)}
+  .stat{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px 20px;margin:14px 0 4px;font-size:.86rem}
+  .stat div{border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:8px}
+  .stat b{display:block;font-size:1.5rem;color:var(--cyan-lt);font-weight:800}
+  .stat span{color:#a9bcc2;font-size:.74rem;letter-spacing:.06em}
+  section.block{margin:30px 0}
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;margin-top:14px}
+  .feat div{display:flex;gap:10px;align-items:flex-start;font-size:.89rem}
+  .feat svg{width:16px;height:16px;color:var(--cyan);flex:none;margin-top:5px}
+  .feat b{font-weight:700}
+  .demo{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:var(--ink);color:#fff;padding:18px 24px;border-radius:12px;margin-top:14px}
+  .demo a{color:var(--cyan-lt);font-weight:700;word-break:break-all}
+  .demo small{color:#9aacb2;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+  .price-hero{background:var(--ink);color:#fff;padding:32px 34px;border-radius:1.75rem;margin-top:16px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;box-shadow:inset 0 1px 1px rgba(255,255,255,.08);border:1px solid rgba(47,184,203,.25)}
+  .price-hero .col small{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan-lt)}
+  .price-hero .col b{font-size:2.7rem;font-weight:800;display:block;line-height:1.1;letter-spacing:-.04em}
+  .price-hero .col span{font-size:.84rem;color:#9aacb2}
+  .price-hero .divider{width:1px;background:rgba(47,184,203,.5)}
+  .roi{background:#eaf5f7;border:1px solid #d7e9ec;border-radius:12px;padding:20px 24px;margin-top:16px;font-size:.92rem}
+  .roi b{color:var(--cyan)}
+  table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.88rem}
+  th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  td.amt{text-align:right;font-size:1.22rem;white-space:nowrap;font-weight:700;letter-spacing:-.02em}
+  tr.total td{border-bottom:none;border-top:2px solid var(--cyan);font-weight:700;padding-top:16px}
+  tr.total td.amt{color:var(--cyan);font-size:1.5rem}
+  .rec{display:inline-block;background:var(--cyan);color:#fff;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:100px;font-weight:700;margin-left:8px;vertical-align:middle}
+  .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+  .opt{border:1px solid var(--line);border-radius:1.6rem;padding:24px 22px;background:var(--paper);transition:.5s var(--ease)}
+  .opt.hl{border-color:var(--cyan);box-shadow:0 0 0 1px var(--cyan)}
+  .opt .k{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);font-weight:700}
+  .opt h4{font-size:1.12rem;margin:4px 0 10px}
+  .opt .pr{font-size:1.4rem;font-weight:800;letter-spacing:-.03em}
+  .opt .pr small{font-size:.76rem;color:var(--muted);font-weight:400}
+  .opt p{font-size:.79rem;color:var(--muted);margin-top:8px;margin-bottom:0}
+  ul.plain{list-style:none;margin-top:12px}
+  ul.plain li{display:flex;gap:11px;align-items:flex-start;font-size:.88rem;margin-bottom:9px}
+  ul.plain svg{width:15px;height:15px;color:var(--cyan);flex:none;margin-top:5px}
+  ul.plain b{font-weight:700}
+  .terms{font-size:.79rem;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:14px}
+  .terms b{color:var(--ink);font-weight:700}
+  .cta{margin-top:30px;border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
+  .cta .sign b{font-size:1.2rem;display:block;font-weight:700}
+  .cta .sign span{font-size:.83rem;color:var(--muted)}
+  .btn{background:var(--cyan-lt);color:#fff;padding:10px 8px 10px 24px;border-radius:100px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:12px}
+  .btn i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;font-style:normal}
+  .foot{text-align:center;font-size:.7rem;color:var(--muted);margin-top:28px}
+  .noprint{max-width:820px;margin:0 auto 22px;text-align:center}
+  .noprint button{background:var(--ink);color:#fff;border:0;padding:12px 28px;border-radius:100px;font-family:'Sora',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.08em;cursor:pointer;text-transform:uppercase}
+  @media(max-width:680px){.inner{padding:34px 26px}.feat,.cards,.stat{grid-template-columns:1fr}.price-hero .divider{display:none}}
+  @media print{body{background:#fff;padding:0}.noprint{display:none}.page{box-shadow:none;margin:0}
+    .price-hero,.demo,.btn,.opt.hl,.rec,.hi,.good,.roi{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<div class="noprint"><button onclick="window.print()">⬇︎ PDF olarak kaydet / Yazdır</button></div>
+
+<div class="page"><div class="inner">
+
+  <div class="top">
+    <div class="logo">
+      <span class="mk"><i>B</i></span>
+      <span><b>Başkent Lazer</b><i class="s">Merkezi</i></span>
+    </div>
+    <div class="doclabel">Fiyat Teklifi<b>Web Sitesi</b></div>
+  </div>
+
+  <div class="meta">
+    <div><b>Hazırlayan:</b> MY BASKETO LTD · gozankaya@gmail.com</div>
+    <div><b>Hazırlanan:</b> Başkent Lazer Merkezi — Lefkoşa / KKTC</div>
+    <div><b>Tarih:</b> 17.08.2026 · <b>Geçerlilik:</b> 14 gün</div>
+  </div>
+
+  <span class="eyebrow">Merhaba 👋</span>
+  <div class="lead">
+    Başkent Lazer Merkezi'ni inceledim — <strong>1.429 Instagram takipçisi</strong> ve
+    <strong>105 değerlendirme</strong> ile Lefkoşa'da tanınan bir isim olmuşsunuz. Ama şu anda
+    randevu almak isteyen biri sizi <strong>kendi adresinizde değil, başka bir şirketin
+    platformunda</strong> buluyor.
+  </div>
+
+  <div class="hi">
+    <div class="hd">★ Asıl mesele burada</div>
+    <p>Instagram bio'nuzdaki link sizi <b>kolayrandevu.com</b> üzerindeki bir sayfaya götürüyor —
+    kendi alan adınız değil, Kıbrıs'ta onlarca farklı işletmenin aynı platformda listelendiği kiralık
+    bir randevu sayfası. Marka adınız o adreste geçse de, adres sizin değil.</p>
+    <p>Google Haritalar'da da <b>"Başkent Lazer Merkezi" adına kayıtlı ayrı bir işletme profili
+    bulamadım</b> — aratıldığında karşınıza kendi kaydınız değil, farklı bir kurumun kaydı çıkabiliyor.</p>
+    <div class="stat">
+      <div><b>1.429</b><span>Instagram takipçisi</span></div>
+      <div><b>105</b><span>Değerlendirme</span></div>
+      <div><b>0</b><span>Kendi alan adınız</span></div>
+    </div>
+    <p style="margin-top:16px;margin-bottom:0">Rakamlarınız güçlü — eksik olan tek şey, o rakamların
+    arkasında duran, sizin kontrolünüzdeki bir adres.</p>
+  </div>
+
+  <div class="good">
+    <div class="hd">✓ İyi haber</div>
+    <p style="margin-bottom:0"><b>baskentlazer.com</b> ve <b>baskentlazer.com.tr</b> — markanızla
+    birebir örtüşen alan adları — şu an <b>boşta ve müsait</b>. İki ayrı kaynaktan doğruladım
+    (RDAP + DNS): kimse almamış. İmza tarihinde hâlâ boşta olması şartıyla, sizin adınıza kaydedip
+    siteye bağlıyoruz.</p>
+  </div>
+
+  <p style="font-size:.9rem;color:var(--muted);margin-top:14px">
+    Anlatmak yerine yaptım. Gerçek rakamlarınızla ve WhatsApp'a bağlı bir randevu formuyla hazır
+    bir site aşağıda.
+  </p>
+
+  <div class="demo">
+    <div><small>Canlı demo — şimdi inceleyin</small><br><a href="https://gracoins.github.io/baskent-lazer/">gracoins.github.io/baskent-lazer</a></div>
+    <div><small>Telefon &amp; bilgisayar uyumlu</small></div>
+  </div>
+
+  <section class="block">
+    <span class="eyebrow">Sitenin Kalbi</span>
+    <h2>5 uygulama bölgesi, <span class="pf grad">tek sayfa</span></h2>
+    <p style="font-size:.92rem">
+      Bacaktan yüze kadar sunduğunuz her uygulama bölgesini tek tek anlatan, kullandığınız cihazı
+      öne çıkaran bir yapı kurdum:
+    </p>
+    <ul class="plain">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>5 uygulama kartı —</b> bacak, koltuk altı, bikini bölgesi, yüz, sırt &amp; göğüs ayrı ayrı anlatılıyor.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Teknoloji bölümü —</b> kullandığınız GentleLase Pro cihazı ayrı bir başlıkta anlatılıyor.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Randevu formu —</b> talebin tamamı <b>düzenli bir mesaj halinde WhatsApp'ınıza düşüyor</b>. Siz sadece "uygun" deyip teyit ediyorsunuz. Komisyon yok, aracı yok.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Gece geç saatte bile —</b> merkez kapalıyken bile talep birikir, sabah hazır bulursunuz.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Neler Dahil</span>
+    <h2>Siteniz neler sunuyor?</h2>
+    <div class="feat">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Markanıza özel ice-lazer tasarım</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>WhatsApp'a bağlı randevu formu</b></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>5 uygulama başlığı, ayrı ayrı anlatımlı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Kullandığınız cihaza (GentleLase Pro) özel bölüm</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Instagram takipçi ve değerlendirme sayınız</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Çalışma saatleri &amp; Google Haritalar</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Instagram hesabınıza bağlantı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>WhatsApp'ta şık link önizleme kartı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Yerel SEO</b> — "Lefkoşa lazer epilasyon" aramaları için</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Fiyat listesi bölümü (isterseniz eklenir)</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Yatırımınız</span>
+    <h2>Fiyatlandırma</h2>
+    <div class="price-hero">
+      <div class="col"><small>Kurulum · Tek Seferlik</small><b>25.000 ₺</b><span>Tasarım, içerik, randevu formu, alan adı, yayına alma</span></div>
+      <div class="divider"></div>
+      <div class="col"><small>Bakım · Aylık</small><b>3.000 ₺<small style="font-size:1rem;color:#9aacb2;font-weight:400"> /ay</small></b><span>Alan adı, hosting, güncellemeler &amp; öncelikli destek</span></div>
+    </div>
+    <div class="roi">
+      Şöyle bakalım: site size ayda <b>tek bir yeni müşteri</b> kazandırsa, aylık bakımın bedelini
+      fazlasıyla çıkarır. Kurulum bedeli ise <b>bir kerelik</b> — site ve alan adı sonrasında sizin
+      malınız olur, her ay yeniden ödemezsiniz.
+    </div>
+    <table>
+      <tr><th>Kalem</th><th>Açıklama</th><th style="text-align:right">Tutar</th></tr>
+      <tr><td>Web Sitesi Kurulumu</td><td>Özel tasarım, içerik yazımı, 5 uygulama başlığı, mobil uyum</td><td class="amt">17.000 ₺</td></tr>
+      <tr><td>Randevu Formu</td><td>Bölge + tarih seçimi, WhatsApp'a otomatik talep iletimi</td><td class="amt">5.000 ₺</td></tr>
+      <tr><td>Teknoloji Bölümü</td><td>Kullandığınız cihaza özel tanıtım bölümü</td><td class="amt">3.000 ₺</td></tr>
+      <tr><td><b>Alan Adı</b></td><td><b>Sizin adınıza kayıtlı — baskentlazer.com şu an müsait</b></td><td class="amt">Dahil</td></tr>
+      <tr><td>Aylık Bakım Paketi</td><td>Alan adı + hosting + SSL, içerik güncellemeleri, teknik destek</td><td class="amt">3.000 ₺/ay</td></tr>
+      <tr class="total"><td>Başlangıç Ödemesi</td><td>Kurulum + ilk ay bakım</td><td class="amt">28.000 ₺</td></tr>
+    </table>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Aylık 3.000 ₺ ne kapsıyor?</span>
+    <h3 style="margin-top:8px">Sizin uğraşacağınız hiçbir şey kalmıyor</h3>
+    <ul class="plain">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Alan adı yenileme takibi</b> — baskentlazer.com'un süresi dolmadan biz yeniliyoruz, tekrar boşa düşmesin diye takip bizde.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Hosting ve SSL yönetimi</b> — site 7/24 açık ve güvenli kalır.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>İçerik güncellemeleri</b> — yeni bilgi/kampanya olduğunda WhatsApp'tan gönderin, aynı hafta sitede olur.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Randevu formu bakımı</b> — bölge listesi değişirse forma eklenir, aksaklık olursa aynı gün çözülür.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Ödeme Seçenekleri</span>
+    <h2>Size uygun olanı seçin</h2>
+    <div class="cards">
+      <div class="opt">
+        <div class="k">Seçenek A</div><h4>Sadece Kurulum</h4>
+        <div class="pr">25.000 ₺</div>
+        <p>Site ve alan adı sizin olur. Güncelleme ve teknik yönetim size ait.</p>
+      </div>
+      <div class="opt hl">
+        <div class="k">Seçenek B <span class="rec">Önerilen</span></div><h4>Kurulum + Bakım</h4>
+        <div class="pr">25.000 ₺ <small>+ 3.000 ₺/ay</small></div>
+        <p>Her şeyi biz yönetiriz. Siz sadece randevularla ilgilenirsiniz.</p>
+      </div>
+      <div class="opt">
+        <div class="k">Seçenek C</div><h4>Yıllık Anlaşma</h4>
+        <div class="pr">25.000 ₺ <small>+ 30.000 ₺/yıl</small></div>
+        <p>Bakımı yıllık peşin ödeyin, <b>2 ay hediye</b> (36.000 yerine 30.000 ₺).</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="terms">
+    <b>Şartlar:</b> Kurulum bedelinin %50'si iş başlangıcında, %50'si yayına alımında ödenir. Alan adı
+    Başkent Lazer Merkezi adına kaydedilir ve bakım anlaşmasından bağımsız olarak size aittir — imza
+    tarihinde hâlâ boşta olması şartına bağlıdır. Aylık bakım, sitenin yayına alındığı tarihte başlar
+    ve aylık faturalandırılır; 30 gün önceden bildirimle sonlandırılabilir. Bu teklif <b>14 gün</b>
+    geçerlidir. Hizmet, MY BASKETO LTD (İngiltere) tarafından faturalandırılır; belirtilen tutarlar
+    nettir.
+  </div>
+
+  <div class="cta">
+    <div class="sign"><b>MY BASKETO LTD</b><span>Web Tasarım &amp; Dijital Çözümler · gozankaya@gmail.com</span></div>
+    <div class="btn">Onaylamak için ulaşın <i>↗</i></div>
+  </div>
+
+  <div class="foot">Bu teklif Başkent Lazer Merkezi için özel olarak hazırlanmıştır · Canlı demo: gracoins.github.io/baskent-lazer</div>
+
+</div></div>
+</body>
+</html>

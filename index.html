@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Başkent Lazer Merkezi — Lefkoşa, KKTC</title>
+<meta name="description" content="Başkent Lazer Merkezi — Lefkoşa, KKTC. GentleLase Pro cihazıyla lazer epilasyon. Randevu için WhatsApp'tan yazabilirsiniz.">
+<meta property="og:title" content="Başkent Lazer Merkezi — Lefkoşa, KKTC">
+<meta property="og:description" content="GentleLase Pro cihazıyla lazer epilasyon — 4.9 puan, 1.429 Instagram takipçisi.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gracoins.github.io/baskent-lazer/">
+<meta property="og:image" content="https://gracoins.github.io/baskent-lazer/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#06090d; --panel:#0c141b; --panel2:#101c24; --glass:rgba(255,255,255,.045);
+  --cyan:#4fd1e0; --cyan-lt:#a6ecf2; --violet:#8b7cf0; --violet-lt:#b7aef7;
+  --text:#eaf4f6; --muted:#8fa5ac; --line:rgba(255,255,255,.1);
+  --d:'Syne',sans-serif; --b:'Sora',system-ui,sans-serif;
+  --ease:cubic-bezier(.32,.72,0,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--text);font-family:var(--b);font-weight:400;
+  font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--d);font-weight:700;letter-spacing:-.01em;line-height:1.1}
+em{font-style:normal;font-weight:800;color:var(--cyan)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.w{width:min(1180px,92vw);margin:0 auto}
+.rv{opacity:0;filter:blur(8px);transform:translateY(38px);transition:opacity .95s var(--ease),transform .95s var(--ease),filter .95s var(--ease)}
+.rv.in{opacity:1;filter:blur(0);transform:none}
+.rv2{transition-delay:.12s}.rv3{transition-delay:.24s}.rv4{transition-delay:.36s}.rv5{transition-delay:.48s}.rv6{transition-delay:.6s}
+
+.grain{position:fixed;inset:0;pointer-events:none;z-index:80;opacity:.03;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.glow-fx{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.glow-fx i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.28}
+.g1{width:520px;height:520px;background:var(--cyan);top:-160px;left:-120px}
+.g2{width:460px;height:460px;background:var(--violet);top:40vh;right:-160px;opacity:.2}
+.g3{width:400px;height:400px;background:var(--cyan);bottom:-140px;left:20vw;opacity:.16}
+
+.eyebrow{font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--cyan);
+  display:flex;align-items:center;gap:14px;margin-bottom:20px;font-weight:600;font-family:var(--d)}
+.eyebrow::before,.eyebrow::after{content:"";width:26px;height:1px;background:var(--cyan);opacity:.5}
+.center .eyebrow{justify-content:center}
+
+.navwrap{position:fixed;top:18px;left:0;right:0;z-index:90;display:flex;justify-content:center;pointer-events:none}
+.navpill{pointer-events:auto;display:flex;align-items:center;gap:28px;background:rgba(10,16,21,.66);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.09);
+  border-radius:100px;padding:9px 10px 9px 20px;box-shadow:0 14px 34px -14px rgba(0,0,0,.5);transition:.5s var(--ease)}
+.brandlock{display:flex;align-items:center;gap:10px}
+.bmark{width:34px;height:34px;border-radius:50%;background:linear-gradient(150deg,var(--cyan-lt),var(--violet));
+  display:grid;place-items:center;flex:none}
+.bmark i{font-family:var(--d);font-weight:800;color:var(--void);font-size:1.05rem;font-style:normal}
+.bname{display:flex;flex-direction:column;line-height:1.15}
+.bname b{font-family:var(--d);font-size:.98rem;color:#fff;font-weight:700}
+.bname span{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.navlinks{display:flex;gap:24px;font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
+.navlinks a{color:rgba(255,255,255,.72);transition:.3s}
+.navlinks a:hover{color:var(--cyan-lt)}
+.navcta{display:inline-flex;align-items:center;gap:10px;background:var(--cyan);color:var(--void);
+  padding:8px 8px 8px 18px;border-radius:100px;font-size:.74rem;font-weight:700;letter-spacing:.03em;transition:.45s var(--ease)}
+.navcta i{width:28px;height:28px;border-radius:50%;background:rgba(6,9,13,.18);display:grid;place-items:center;transition:.45s var(--ease);font-style:normal}
+.navcta:hover{background:var(--cyan-lt)}
+.navcta:hover i{transform:translate(2px,-1px) scale(1.06)}
+.burger{display:none;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);
+  align-items:center;justify-content:center;position:relative;cursor:pointer;flex:none}
+.burger span{position:absolute;width:15px;height:1.4px;background:#fff;transition:.4s var(--ease)}
+.burger span:first-child{transform:translateY(-3.5px)}
+.burger span:last-child{transform:translateY(3.5px)}
+body.menu-on .burger span:first-child{transform:rotate(45deg)}
+body.menu-on .burger span:last-child{transform:rotate(-45deg)}
+
+.mmenu{position:fixed;inset:0;z-index:85;background:rgba(4,6,9,.95);backdrop-filter:blur(30px);
+  -webkit-backdrop-filter:blur(30px);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+body.menu-on .mmenu{opacity:1;pointer-events:auto}
+.mmenu a{font-family:var(--d);font-size:1.6rem;font-weight:700;color:#fff;padding:12px 0;opacity:0;
+  transform:translateY(48px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+body.menu-on .mmenu a{opacity:1;transform:none}
+body.menu-on .mmenu a:nth-child(1){transition-delay:.08s}
+body.menu-on .mmenu a:nth-child(2){transition-delay:.14s}
+body.menu-on .mmenu a:nth-child(3){transition-delay:.2s}
+body.menu-on .mmenu a:nth-child(4){transition-delay:.26s}
+body.menu-on .mmenu a:nth-child(5){transition-delay:.32s}
+.mmenu .navcta{margin-top:22px}
+
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 8px 16px 28px;border-radius:100px;
+  font-size:.82rem;letter-spacing:.03em;font-weight:700;transition:.45s var(--ease);cursor:pointer;
+  font-family:var(--b);border:1px solid transparent}
+.btn i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;transition:.45s var(--ease);flex:none;font-style:normal}
+.btn-g{background:var(--cyan);color:var(--void)}
+.btn-g i{background:rgba(6,9,13,.16)}
+.btn-g:hover{background:var(--cyan-lt);transform:translateY(-2px)}
+.btn-g:hover i{transform:translate(2px,-1px) scale(1.06)}
+.btn-o{border-color:rgba(255,255,255,.24);color:#fff;padding:16px 26px}
+.btn-o:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.44)}
+.btn:active{transform:scale(.98)}
+
+.bez{background:var(--glass);border:1px solid var(--line);border-radius:2rem;padding:.4rem;position:relative;z-index:1}
+.bez-core{background:var(--panel);border-radius:1.65rem;box-shadow:inset 0 1px 1px rgba(255,255,255,.06);overflow:hidden;position:relative}
+
+.hero{min-height:100dvh;position:relative;padding:150px 0 0;overflow:hidden;display:flex;align-items:center}
+.hgrid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center;padding-bottom:70px}
+.hero h1{font-size:clamp(2.5rem,4.6vw,3.8rem);margin-bottom:22px}
+.hlede{font-size:clamp(1rem,1.6vw,1.12rem);color:var(--muted);max-width:480px;margin-bottom:36px;font-weight:400}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+.orb-card{aspect-ratio:4/5;position:relative}
+.orb-core{width:100%;height:100%;position:relative;display:grid;place-items:center;overflow:hidden}
+.orb{width:78%;aspect-ratio:1;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 35% 30%,var(--cyan-lt),var(--cyan) 40%,var(--violet) 78%,transparent 100%);
+  box-shadow:0 0 90px 10px rgba(79,209,224,.35),inset -20px -20px 60px rgba(0,0,0,.35),inset 12px 12px 40px rgba(255,255,255,.25);
+  animation:pulse 5s var(--ease) infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.orb-ring{position:absolute;inset:6%;border:1px solid rgba(255,255,255,.14);border-radius:50%}
+.chip{position:absolute;left:22px;bottom:22px;background:rgba(6,10,14,.78);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.14);border-radius:1rem;padding:12px 18px;color:#fff;z-index:2}
+.chip span{display:block;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan-lt);margin-bottom:3px}
+.chip b{font-family:var(--d);font-size:1rem;font-weight:700}
+
+.proof{position:relative;z-index:2;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr)}
+.pitem{padding:26px 20px;text-align:center;border-left:1px solid var(--line)}
+.pitem:first-child{border-left:none}
+.pitem b{display:block;font-family:var(--d);font-size:1.9rem;color:var(--cyan-lt);font-weight:800}
+.pitem span{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+section{padding:clamp(80px,10vw,140px) 0;position:relative;z-index:1}
+.stitle{font-size:clamp(2rem,3.6vw,2.9rem);margin-bottom:20px}
+.slead{color:var(--muted);max-width:620px;font-size:1.04rem}
+.center{text-align:center}.center .slead{margin:0 auto}
+
+.about{background:var(--panel)}
+.agrid{display:grid;grid-template-columns:1fr;gap:24px}
+.about .bez-core{padding:clamp(30px,5vw,50px)}
+
+.svc{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:56px}
+.card{padding:32px 30px;transition:.5s var(--ease);height:100%}
+.svc .bez{transition:.5s var(--ease)}
+.svc .bez:hover{transform:translateY(-4px);border-color:rgba(79,209,224,.35)}
+.card .no{font-family:var(--d);color:var(--cyan);font-size:1.5rem;margin-bottom:14px;display:block;font-weight:800}
+.card h3{font-size:1.18rem;margin-bottom:10px;font-weight:700}
+.card p{color:var(--muted);font-size:.92rem}
+.s1{grid-column:span 4}.s2{grid-column:span 4}.s3{grid-column:span 4}
+.s4{grid-column:span 6}.s5{grid-column:span 6}
+
+.tech{background:var(--void)}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,6vw,80px);align-items:center}
+.tech .bez-core{padding:clamp(30px,5vw,50px);display:grid;place-items:center;aspect-ratio:1}
+.beam{width:70%;position:relative}
+.beam .line{height:2px;background:linear-gradient(90deg,transparent,var(--cyan),var(--violet),transparent);
+  border-radius:2px;margin:26px 0;animation:sweep 3.2s var(--ease) infinite}
+.beam .line:nth-child(2){animation-delay:.3s;opacity:.7}
+.beam .line:nth-child(3){animation-delay:.6s;opacity:.45}
+@keyframes sweep{0%,100%{transform:scaleX(.7);opacity:.5}50%{transform:scaleX(1);opacity:1}}
+.tfeat{list-style:none;margin-top:24px}
+.tfeat li{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.tfeat b{color:var(--cyan-lt);font-family:var(--d);font-weight:700}
+
+.neden{background:var(--panel)}
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.nitem{padding:34px 28px}
+.nitem .ic{width:46px;height:46px;border-radius:50%;background:rgba(79,209,224,.14);display:grid;place-items:center;margin-bottom:20px}
+.nitem svg{width:20px;height:20px;stroke:var(--cyan-lt)}
+.nitem h3{font-size:1.06rem;margin-bottom:8px;font-weight:700}
+.nitem p{color:var(--muted);font-size:.9rem}
+
+.randevu{background:var(--void)}
+.rgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(34px,6vw,72px);align-items:start}
+.rpoints{list-style:none;margin-top:30px}
+.rpoints li{display:flex;gap:16px;padding:19px 0;border-bottom:1px solid var(--line)}
+.rpoints b{font-family:var(--d);font-size:1.4rem;color:var(--cyan);line-height:1;flex:none;width:36px;font-weight:800}
+.rpoints strong{display:block;color:#fff;font-weight:700;margin-bottom:3px;font-size:1rem}
+.rpoints span{font-size:.93rem;color:var(--muted)}
+.form{padding:clamp(26px,4vw,38px)}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:700}
+.fld input,.fld select,.fld textarea{width:100%;background:var(--panel2);border:1px solid var(--line);
+  border-radius:14px;padding:14px 16px;font-family:var(--b);font-size:.96rem;color:var(--text);
+  outline:none;transition:.3s var(--ease)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--cyan);background:#0d171f;box-shadow:0 0 0 3px rgba(79,209,224,.14)}
+.fld textarea{min-height:88px;resize:vertical}
+.fld select option{background:var(--panel2);color:var(--text)}
+.form .btn{width:100%;justify-content:center;margin-top:8px;padding:16px 30px}
+.form .btn i{display:none}
+.rnote{font-size:.82rem;color:var(--muted);text-align:center;margin-top:14px}
+
+footer{background:var(--panel);color:var(--muted);padding:clamp(70px,7vw,100px) 0 36px;border-top:1px solid var(--line)}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(30px,5vw,64px)}
+.fbrand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+footer h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan-lt);margin-bottom:18px;font-weight:700}
+footer a.flink{color:var(--muted);transition:.3s;display:flex;align-items:center;min-height:40px;padding:6px 0}
+footer a.flink:hover{color:var(--cyan-lt)}
+footer p{font-size:.92rem;margin-bottom:8px;color:var(--muted)}
+.fbot{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;color:rgba(255,255,255,.32)}
+
+.wafab{position:fixed;right:20px;bottom:20px;z-index:70;display:flex;align-items:center;gap:9px;
+  background:#25d366;color:#fff;padding:13px 20px 13px 13px;border-radius:100px;
+  box-shadow:0 10px 28px -6px rgba(37,211,102,.5);transition:.45s var(--ease);font-weight:700;font-size:.85rem}
+.wafab:hover{transform:translateY(-2px) scale(1.02)}
+.wafab svg{width:24px;height:24px;fill:#fff;flex:none}
+
+@media(max-width:900px){
+  .navlinks,.navcta{display:none}
+  .burger{display:flex}
+  .navpill{padding:8px}
+  .hgrid{grid-template-columns:1fr}
+  .orb-card{width:100%;max-width:340px;margin:0 auto;order:-1}
+  .tgrid{grid-template-columns:1fr}
+  .rgrid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr}
+  .pitem{border-left:none;border-top:1px solid var(--line)}
+  .pitem:first-child{border-top:none}
+  .s1,.s2,.s3,.s4,.s5{grid-column:span 12}
+  .ngrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr;gap:34px}
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="glow-fx"><i class="g1"></i><i class="g2"></i><i class="g3"></i></div>
+
+<div class="navwrap"><div class="navpill">
+  <div class="brandlock"><span class="bmark"><i>B</i></span>
+    <div class="bname"><b>Başkent Lazer</b><span>Merkezi</span></div></div>
+  <nav class="navlinks">
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#teknoloji">Teknoloji</a>
+    <a href="#randevu">Randevu</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+  <a class="navcta" href="https://wa.me/905338210909" target="_blank">Randevu <i>↗</i></a>
+  <div class="burger" id="burger"><span></span><span></span></div>
+</div></div>
+
+<div class="mmenu" id="mmenu">
+  <a href="#hakkimizda">Hakkımızda</a>
+  <a href="#hizmetler">Hizmetler</a>
+  <a href="#teknoloji">Teknoloji</a>
+  <a href="#randevu">Randevu</a>
+  <a href="#iletisim">İletişim</a>
+  <a class="navcta" href="https://wa.me/905338210909" target="_blank">WhatsApp'tan yazın <i>↗</i></a>
+</div>
+
+<div class="hero">
+  <div class="w">
+    <div class="hgrid">
+      <div>
+        <div class="eyebrow">LEFKOŞA · KKTC</div>
+        <h1>Lefkoşa'da <em>ice-cool</em> lazer epilasyon</h1>
+        <p class="hlede">Başkent Lazer Merkezi — GentleLase Pro cihazıyla, cilt tipinize göre planlanan lazer epilasyon uygulamaları.</p>
+        <div class="hbtns">
+          <a class="btn btn-g" href="https://wa.me/905338210909" target="_blank">WhatsApp'tan randevu <i>↗</i></a>
+          <a class="btn btn-o" href="#hizmetler">Hizmetleri gör</a>
+        </div>
+      </div>
+      <div class="orb-card bez">
+        <div class="bez-core orb-core">
+          <div class="orb"><div class="orb-ring"></div></div>
+        </div>
+        <div class="chip"><span>Teknoloji</span><b>GentleLase Pro</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="proof"><div class="w pgrid">
+  <div class="pitem"><b>4.9</b><span>Değerlendirme Puanı</span></div>
+  <div class="pitem"><b>105</b><span>Değerlendirme</span></div>
+  <div class="pitem"><b>1.429</b><span>Instagram Takipçisi</span></div>
+</div></div>
+
+<section class="about" id="hakkimizda"><div class="w agrid">
+  <div class="bez rv"><div class="bez-core">
+    <span class="eyebrow">Hakkımızda</span>
+    <h2 class="stitle">Lefkoşa'da <em>güvenilir</em> bir isim</h2>
+    <p class="slead" style="max-width:100%">Başkent Lazer Merkezi, Lefkoşa'da GentleLase Pro cihazıyla lazer epilasyon hizmeti veren bir merkez. 1.429 Instagram takipçimiz ve 105 değerlendirmemizle Lefkoşa'da tanınan bir isim olduk. Her seans öncesinde cilt tipinizi ve geçmiş uygulamalarınızı birlikte değerlendiriyor, size uygun ayarı planlıyoruz.</p>
+  </div></div>
+</div></section>
+
+<section id="hizmetler"><div class="w">
+  <div class="center rv">
+    <span class="eyebrow">Hizmetlerimiz</span>
+    <h2 class="stitle">Bölgeye özel <em>lazer epilasyon</em></h2>
+    <p class="slead">Vücut bölgenize göre planlanan lazer epilasyon uygulamaları.</p>
+  </div>
+  <div class="svc">
+    <div class="s1 bez rv"><div class="bez-core card"><span class="no">01</span><h3>Bacak Epilasyonu</h3><p>Alt ve üst bacak bölgesi için planlanan seans programı.</p></div></div>
+    <div class="s2 bez rv rv2"><div class="bez-core card"><span class="no">02</span><h3>Koltuk Altı Epilasyonu</h3><p>Hassas bölge için düşük acı, hızlı seans süresi.</p></div></div>
+    <div class="s3 bez rv rv3"><div class="bez-core card"><span class="no">03</span><h3>Bikini Bölgesi</h3><p>Cilt tipine göre ayarlanan, mahremiyete önem verilen uygulama.</p></div></div>
+    <div class="s4 bez rv rv4"><div class="bez-core card"><span class="no">04</span><h3>Yüz Epilasyonu</h3><p>Üst dudak, çene ve yanak bölgesi için hassas ayarlı uygulama.</p></div></div>
+    <div class="s5 bez rv rv5"><div class="bez-core card"><span class="no">05</span><h3>Sırt &amp; Göğüs</h3><p>Geniş yüzey alanları için planlanan seans programı.</p></div></div>
+  </div>
+</div></section>
+
+<section class="tech" id="teknoloji"><div class="w tgrid">
+  <div class="bez rv"><div class="bez-core">
+    <div class="beam"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+  </div></div>
+  <div class="rv rv2">
+    <span class="eyebrow">Teknoloji</span>
+    <h2 class="stitle">GentleLase Pro <em>cihazı</em></h2>
+    <p class="slead" style="max-width:100%">Merkezimizde GentleLase Pro cihazı kullanıyoruz — soğutma destekli uygulamayla işlem konforunu artıran, cilt tipine göre ayarlanabilen bir lazer epilasyon teknolojisi.</p>
+    <ul class="tfeat">
+      <li><b>Soğutmalı uçlar —</b> uygulama sırasında cildi soğutarak konfor sağlar.</li>
+      <li><b>Cilt tipine göre ayar —</b> her seansta size uygun parametre belirlenir.</li>
+      <li><b>Geniş uygulama alanı —</b> büyük yüzeylerde daha kısa seans süresi.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="neden"><div class="w">
+  <div class="center rv">
+    <span class="eyebrow">Neden Başkent Lazer</span>
+    <h2 class="stitle">Randevu almadan <em>önce</em></h2>
+  </div>
+  <div class="ngrid">
+    <div class="nitem rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg></div><h3>Merkezi Lefkoşa konumu</h3><p>Ulaşımı kolay bir konumda, düzenli çalışma saatleriyle hizmet veriyoruz.</p></div>
+    <div class="nitem rv rv2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg></div><h3>Kişiye özel planlama</h3><p>Her seans öncesinde cilt tipinize göre cihaz ayarı belirleniyor.</p></div>
+    <div class="nitem rv rv3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12l5 5L20 6"/></svg></div><h3>Hızlı geri dönüş</h3><p>WhatsApp'tan yazdığınızda mesajınıza aynı gün içinde yanıt veriyoruz.</p></div>
+  </div>
+</div></section>
+
+<section class="randevu" id="randevu"><div class="w rgrid">
+  <div class="rv">
+    <span class="eyebrow">Randevu</span>
+    <h2 class="stitle">Yerinizi <em>ayırtın</em></h2>
+    <p class="slead">Formu doldurun, WhatsApp'ta hazır mesaj olarak açılsın. Onaylayıp gönderin, size dönüş yapalım.</p>
+    <ul class="rpoints">
+      <li><b>01</b><span><strong>Hızlı dönüş</strong>Mesajınıza aynı gün içinde yanıt veriyoruz.</span></li>
+      <li><b>02</b><span><strong>Ön görüşme</strong>Cilt tipinizi ve beklentinizi birlikte belirliyoruz.</span></li>
+      <li><b>03</b><span><strong>Net fiyat</strong>Fiyatı seans öncesinde konuşuyoruz, sürpriz yok.</span></li>
+    </ul>
+  </div>
+  <div class="bez rv rv2"><div class="bez-core form">
+    <div class="fld"><label>Ad Soyad</label><input id="f_ad" placeholder="Adınız ve soyadınız"></div>
+    <div class="fld"><label>Telefon</label><input id="f_tel" placeholder="05xx xxx xx xx"></div>
+    <div class="fld"><label>Bölge</label><select id="f_hiz">
+      <option>Bacak Epilasyonu</option><option>Koltuk Altı Epilasyonu</option>
+      <option>Bikini Bölgesi</option><option>Yüz Epilasyonu</option>
+      <option>Sırt &amp; Göğüs</option><option>Diğer / emin değilim</option>
+    </select></div>
+    <div class="fld"><label>Tercih ettiğiniz gün / saat</label><input id="f_zaman" placeholder="Örn. Cuma öğleden sonra"></div>
+    <div class="fld"><label>Eklemek istedikleriniz</label><textarea id="f_not" placeholder="İsteğe bağlı"></textarea></div>
+    <a class="btn btn-g" id="f_gonder" href="#" target="_blank">WhatsApp'ta gönder <i>↗</i></a>
+    <p class="rnote">Form bilgileri kaydedilmez, doğrudan WhatsApp mesajına dönüşür.</p>
+  </div></div>
+</div></section>
+
+<footer id="iletisim"><div class="w">
+  <div class="fgrid">
+    <div>
+      <div class="fbrand"><span class="bmark"><i>B</i></span>
+        <div class="bname"><b style="color:#fff">Başkent Lazer</b><span>Merkezi</span></div></div>
+      <p style="max-width:320px">Lefkoşa'da GentleLase Pro cihazıyla lazer epilasyon — 4.9 puan, 1.429 Instagram takipçisi.</p>
+    </div>
+    <div>
+      <h4>İletişim</h4>
+      <a class="flink" href="https://wa.me/905338210909" target="_blank">0533 821 0909</a>
+      <a class="flink" href="tel:+905338820909">0533 882 0909</a>
+      <a class="flink" href="https://instagram.com/baskentlazermerkezi" target="_blank">@baskentlazermerkezi</a>
+      <a class="flink" href="https://www.google.com/maps/search/Yavuz+Konnolu+Sokak+No:7+Lefko%C5%9Fa+KKTC" target="_blank">Haritada aç</a>
+    </div>
+    <div>
+      <h4>Adres &amp; Saatler</h4>
+      <p>Yavuz Konnolu Sokak No: 7, Lefkoşa, KKTC</p>
+      <p>Pazartesi – Cumartesi · 08:00 – 17:00<br>Pazar kapalı</p>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© <span id="yil"></span> Başkent Lazer Merkezi</span>
+    <span>MY BASKETO LTD tarafından hazırlandı</span>
+  </div>
+</div></footer>
+
+<a class="wafab" href="https://wa.me/905338210909" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+  Randevu
+</a>
+
+<script>
+document.getElementById('yil').textContent=new Date().getFullYear();
+
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.12});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+
+const burger=document.getElementById('burger');
+burger.addEventListener('click',()=>document.body.classList.toggle('menu-on'));
+document.querySelectorAll('#mmenu a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-on')));
+
+const F=document.getElementById('f_gonder');
+function wa(){
+  const v=id=>(document.getElementById(id).value||'').trim();
+  let m='Merhaba, Başkent Lazer Merkezi için randevu almak istiyorum.';
+  if(v('f_ad'))m+=`\n\nAd Soyad: ${v('f_ad')}`;
+  if(v('f_tel'))m+=`\nTelefon: ${v('f_tel')}`;
+  m+=`\nBölge: ${v('f_hiz')}`;
+  if(v('f_zaman'))m+=`\nTercih: ${v('f_zaman')}`;
+  if(v('f_not'))m+=`\nNot: ${v('f_not')}`;
+  F.href=`https://wa.me/905338210909?text=${encodeURIComponent(m)}`;
+}
+['f_ad','f_tel','f_hiz','f_zaman','f_not'].forEach(id=>document.getElementById(id).addEventListener('input',wa));
+wa();
+</script>
+</body>
+</html>
