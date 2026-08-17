@@ -25,7 +25,7 @@
   --ease:cubic-bezier(.32,.72,0,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{background:var(--void);color:var(--text);font-family:var(--b);font-weight:400;
   font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,h3{font-family:var(--d);font-weight:700;letter-spacing:-.01em;line-height:1.1}
@@ -113,6 +113,7 @@ body.menu-on .mmenu a:nth-child(5){transition-delay:.32s}
 .hbtns{display:flex;gap:14px;flex-wrap:wrap}
 .orb-card{aspect-ratio:4/5;position:relative}
 .orb-core{width:100%;height:100%;position:relative;display:grid;place-items:center;overflow:hidden}
+.orb-core img{width:100%;height:100%;object-fit:cover}
 .orb{width:78%;aspect-ratio:1;border-radius:50%;position:relative;
   background:radial-gradient(circle at 35% 30%,var(--cyan-lt),var(--cyan) 40%,var(--violet) 78%,transparent 100%);
   box-shadow:0 0 90px 10px rgba(79,209,224,.35),inset -20px -20px 60px rgba(0,0,0,.35),inset 12px 12px 40px rgba(255,255,255,.25);
@@ -171,6 +172,20 @@ section{padding:clamp(80px,10vw,140px) 0;position:relative;z-index:1}
 .nitem h3{font-size:1.06rem;margin-bottom:8px;font-weight:700}
 .nitem p{color:var(--muted);font-size:.9rem}
 
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.gitem{aspect-ratio:1;position:relative;cursor:pointer}
+.gitem .bez-core{width:100%;height:100%}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:.9s var(--ease)}
+.gitem:hover img{transform:scale(1.06)}
+.gchip{position:absolute;left:14px;bottom:14px;background:rgba(6,10,14,.78);backdrop-filter:blur(8px);
+  border-radius:.7rem;padding:8px 12px;color:#fff;z-index:2}
+.gchip span{font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-lt);display:block}
+.gchip b{font-family:var(--d);font-size:.86rem;font-weight:700}
+.lb{position:fixed;inset:0;background:rgba(3,5,7,.94);z-index:100;display:none;place-items:center;padding:26px}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:1rem}
+.lbx{position:absolute;top:22px;right:28px;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1}
+
 .randevu{background:var(--void)}
 .rgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(34px,6vw,72px);align-items:start}
 .rpoints{list-style:none;margin-top:30px}
@@ -220,6 +235,7 @@ footer p{font-size:.92rem;margin-bottom:8px;color:var(--muted)}
   .pitem:first-child{border-top:none}
   .s1,.s2,.s3,.s4,.s5{grid-column:span 12}
   .ngrid{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
   .fgrid{grid-template-columns:1fr;gap:34px}
 }
 </style>
@@ -236,6 +252,7 @@ footer p{font-size:.92rem;margin-bottom:8px;color:var(--muted)}
     <a href="#hakkimizda">Hakkımızda</a>
     <a href="#hizmetler">Hizmetler</a>
     <a href="#teknoloji">Teknoloji</a>
+    <a href="#galeri">Galeri</a>
     <a href="#randevu">Randevu</a>
     <a href="#iletisim">İletişim</a>
   </nav>
@@ -247,6 +264,7 @@ footer p{font-size:.92rem;margin-bottom:8px;color:var(--muted)}
   <a href="#hakkimizda">Hakkımızda</a>
   <a href="#hizmetler">Hizmetler</a>
   <a href="#teknoloji">Teknoloji</a>
+  <a href="#galeri">Galeri</a>
   <a href="#randevu">Randevu</a>
   <a href="#iletisim">İletişim</a>
   <a class="navcta" href="https://wa.me/905338210909" target="_blank">WhatsApp'tan yazın <i>↗</i></a>
@@ -265,9 +283,7 @@ footer p{font-size:.92rem;margin-bottom:8px;color:var(--muted)}
         </div>
       </div>
       <div class="orb-card bez">
-        <div class="bez-core orb-core">
-          <div class="orb"><div class="orb-ring"></div></div>
-        </div>
+        <div class="bez-core orb-core"><img src="foto/hero.png" alt="Başkent Lazer Merkezi GentleLase Pro lazer epilasyon uygulaması"></div>
         <div class="chip"><span>Teknoloji</span><b>GentleLase Pro</b></div>
       </div>
     </div>
@@ -331,6 +347,24 @@ footer p{font-size:.92rem;margin-bottom:8px;color:var(--muted)}
   </div>
 </div></section>
 
+<section id="galeri"><div class="w">
+  <div class="center rv">
+    <span class="eyebrow">Galeri</span>
+    <h2 class="stitle">Uygulamalarımızdan <em>kareler</em></h2>
+    <p class="slead">GentleLase Pro cihazıyla gerçekleştirdiğimiz uygulamalardan kareler.</p>
+  </div>
+  <div class="gal">
+    <div class="gitem rv bez"><div class="bez-core"><img src="foto/kol.png" alt="Kol bölgesi lazer epilasyon uygulaması"></div>
+      <div class="gchip"><span>Uygulama</span><b>Kol</b></div></div>
+    <div class="gitem rv rv2 bez"><div class="bez-core"><img src="foto/bacak.png" alt="Bacak bölgesi lazer epilasyon uygulaması"></div>
+      <div class="gchip"><span>Uygulama</span><b>Bacak</b></div></div>
+    <div class="gitem rv rv3 bez"><div class="bez-core"><img src="foto/sirt.png" alt="Sırt bölgesi lazer epilasyon uygulaması"></div>
+      <div class="gchip"><span>Uygulama</span><b>Sırt</b></div></div>
+    <div class="gitem rv rv4 bez"><div class="bez-core"><img src="foto/hero.png" alt="GentleLase Pro cihazı yakın çekim"></div>
+      <div class="gchip"><span>Teknoloji</span><b>GentleLase Pro</b></div></div>
+  </div>
+</div></section>
+
 <section class="randevu" id="randevu"><div class="w rgrid">
   <div class="rv">
     <span class="eyebrow">Randevu</span>
@@ -388,6 +422,8 @@ footer p{font-size:.92rem;margin-bottom:8px;color:var(--muted)}
   Randevu
 </a>
 
+<div class="lb" id="lb" onclick="this.classList.remove('on')"><span class="lbx">&times;</span><img id="lbi" src=""></div>
+
 <script>
 document.getElementById('yil').textContent=new Date().getFullYear();
 
@@ -397,6 +433,9 @@ document.querySelectorAll('.rv').forEach(e=>io.observe(e));
 const burger=document.getElementById('burger');
 burger.addEventListener('click',()=>document.body.classList.toggle('menu-on'));
 document.querySelectorAll('#mmenu a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-on')));
+
+document.querySelectorAll('.gitem img').forEach(g=>g.closest('.gitem').addEventListener('click',()=>{
+  document.getElementById('lbi').src=g.src;document.getElementById('lb').classList.add('on')}));
 
 const F=document.getElementById('f_gonder');
 function wa(){
